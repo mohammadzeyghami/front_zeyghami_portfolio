@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { AppWrap } from "../../Wrapper";
 import { images } from "../../constants";
 import "./Header.scss";
 
@@ -23,12 +24,12 @@ const Header = () => {
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
-              <h4 className="head-text">Mohammad</h4>
+              <h1 className="head-text">Micael</h1>
             </div>
           </div>
 
           <div className="tag-cmp app__flex">
-            <p className="p-text">frontend Developer</p>
+            <p className="p-text">Web Developer</p>
             <p className="p-text">Freelancer</p>
           </div>
         </div>
@@ -39,11 +40,11 @@ const Header = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.circle} alt="profile_bg" />
+        <img src={images.myImgg} alt="profile_bg" />
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          src={images.myImgg}
+          src={images.circle}
           alt="profile_circle"
           className="overlay_circle"
         />
@@ -55,14 +56,14 @@ const Header = () => {
         className="app__header-circles"
       >
         {[
-          images.react,
           images.redux,
           images.sass,
-          images.bootstrap,
+          images.react,
           images.mui,
+          images.bootstrap,
           images.git,
-          images.rapidapi,
           images.sanity,
+          images.rapidapi,
         ].map((circle, index) => (
           <div className="circle-cmp app__flex" key={`circle-${index}`}>
             <img src={circle} alt="profile_bg" />
@@ -73,4 +74,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AppWrap(Header, "home");

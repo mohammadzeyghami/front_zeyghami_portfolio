@@ -105,10 +105,10 @@
   margin-left: 1rem;
 
   div {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    position: absolute;
+
     background: var(--white-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
@@ -121,53 +121,40 @@
   // circles with different height & width
 
   div:nth-child(1) {
-    width: 150px;
-    height: 150px;
-    left: 300px;
-    bottom: 250px;
-  }
-
-  div:nth-child(2) {
-    width: 100px;
-    height: 100px;
-    left: 480px;
-    bottom: 300px;
-  }
-  div:nth-child(3) {
-    width: 120px;
-    height: 120px;
-    top: 380px;
-    left: 500px;
-  }
-  div:nth-child(4) {
-    width: 110px;
-    height: 110px;
-    top: 700px;
-    right: 300px;
-  }
-  div:nth-child(5) {
-    width: 110px;
-    height: 110px;
-    top: 400px;
-    right: 500px;
-  }
-  div:nth-child(6) {
+    margin-bottom: 8px;
+    margin-left: -216px;
     width: 80px;
     height: 80px;
-    bottom: 300px;
-    right: 550px;
+  }
+  div:nth-child(2) {
+    margin-bottom: 8px;
+    margin-left: -120px;
+  }
+
+  div:nth-child(3) {
+    margin-bottom: 8px;
+    margin-left: -70px;
+  }
+
+  div:nth-child(4) {
+    margin-bottom: 8px;
+    margin-left: -42px;
+  }
+  div:nth-child(5) {
+    margin-bottom: 8px;
+    margin-left: -45px;
+  }
+  div:nth-child(6) {
+    margin-bottom: 8px;
+    margin-left: -65px;
   }
   div:nth-child(7) {
-    width: 90px;
-    height: 90px;
-
-    right: 400px;
+    margin-bottom: 8px;
+    margin-left: -109px;
   }
   div:nth-child(8) {
-    width: 110px;
-    height: 110px;
-    left: 350px;
-    bottom: 500px;
+    margin-bottom: 8px;
+    margin-left: -193px;
   }
 
   @media screen and (min-width: 2000px) {
@@ -191,27 +178,28 @@
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 0;
 
     div {
-      margin: 1rem;
+      margin: 0 !important;
     }
   }
 }
 
 .app__header-img {
   flex: 1;
-  height: 100%;
+  height: 250%;
 
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   position: relative;
+  overflow: hidden;
 
   img {
     width: 100%;
+    border-radius: 20%;
     object-fit: contain;
-    z-index: 1;
+    z-index: 0;
   }
 
   .overlay_circle {
@@ -219,7 +207,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 0;
+
+    z-index: 1;
     width: 100%;
     height: 90%;
   }
