@@ -25,7 +25,6 @@ import about04 from "../assets/about04.png";
 
 import profile from "../assets/profile.png";
 import circle from "../assets/circle.svg";
-import logo from "../assets/logo.png";
 
 import adidas from "../assets/adidas.png";
 import amazon from "../assets/amazon.png";
@@ -34,8 +33,14 @@ import bolt from "../assets/bolt.png";
 import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
+import bootstrap from "../assets/bootstrap-logo.png";
+import sanity from "../assets/sanity.png";
+import rapidapi from "../assets/rapidapi.png";
+import mui from "../assets/mui.png";
+import myImgg from "../assets/myImgg.png";
 
 export default {
+  myImgg,
   email,
   mobile,
   api,
@@ -61,7 +66,9 @@ export default {
   about04,
   profile,
   circle,
-  logo,
+  bootstrap,
+  sanity,
+  rapidapi,
   adidas,
   amazon,
   asus,
@@ -69,4 +76,5 @@ export default {
   nb,
   skype,
   spotify,
+  mui,
 };
