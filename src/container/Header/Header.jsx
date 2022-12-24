@@ -24,7 +24,7 @@ const Header = () => {
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
-              <h1 className="head-text">Micael</h1>
+              <h1 className="head-text">mohammad</h1>
             </div>
           </div>
 
@@ -50,11 +50,7 @@ const Header = () => {
         />
       </motion.div>
 
-      <motion.div
-        variants={scaleVariants}
-        whileInView={scaleVariants.whileInView}
-        className="app__header-circles"
-      >
+      <motion.div className="app__header-circles">
         {[
           images.redux,
           images.sass,
