@@ -108,7 +108,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    position: absolute;
+
     background: var(--white-color);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 
@@ -121,53 +121,19 @@
   // circles with different height & width
 
   div:nth-child(1) {
-    width: 150px;
-    height: 150px;
-    left: 300px;
-    bottom: 250px;
+    width: 100px;
+    height: 100px;
   }
 
   div:nth-child(2) {
-    width: 100px;
-    height: 100px;
-    left: 480px;
-    bottom: 300px;
+    margin: 1.75rem;
+    width: 150px;
+    height: 150px;
   }
-  div:nth-child(3) {
-    width: 120px;
-    height: 120px;
-    top: 380px;
-    left: 500px;
-  }
-  div:nth-child(4) {
-    width: 110px;
-    height: 110px;
-    top: 700px;
-    right: 300px;
-  }
-  div:nth-child(5) {
-    width: 110px;
-    height: 110px;
-    top: 400px;
-    right: 500px;
-  }
-  div:nth-child(6) {
-    width: 80px;
-    height: 80px;
-    bottom: 300px;
-    right: 550px;
-  }
-  div:nth-child(7) {
-    width: 90px;
-    height: 90px;
 
-    right: 400px;
-  }
-  div:nth-child(8) {
-    width: 110px;
-    height: 110px;
-    left: 350px;
-    bottom: 500px;
+  div:nth-child(3) {
+    width: 70px;
+    height: 70px;
   }
 
   @media screen and (min-width: 2000px) {

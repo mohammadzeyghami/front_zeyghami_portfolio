@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { AppWrap } from "../../Wrapper";
 import { images } from "../../constants";
+
 import "./Header.scss";
 
 const Header = () => {
@@ -24,7 +25,7 @@ const Header = () => {
             <span>👋</span>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
-              <h1 className="head-text">mohammad</h1>
+              <h1 className="head-text">Micael</h1>
             </div>
           </div>
 
@@ -36,11 +37,15 @@ const Header = () => {
       </motion.div>
 
       <motion.div
-        whileInView={{ opacity: [0, 1] }}
+        whileInView={{ x: [-100, 0] }}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.myImgg} alt="profile_bg" />
+        <motion.img
+          whileInView={{ scale: [0, 1] }}
+          src={images.myImgg}
+          alt="profile_bg"
+        ></motion.img>
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
@@ -49,8 +54,19 @@ const Header = () => {
           className="overlay_circle"
         />
       </motion.div>
+
+      <motion.div
+        variants={scaleVariants}
+        whileInView={scaleVariants.whileInView}
+        className="app__header-circles"
+      >
+        {[images.sanity, images.redux, images.sass].map((circle, index) => (
+          <div className="circle-cmp app__flex" key={`circle-${index}`}>
+            <img src={circle} alt="profile_bg" />
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
 };
-
 export default AppWrap(Header, "home");
