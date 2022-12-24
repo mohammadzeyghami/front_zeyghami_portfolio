@@ -49,23 +49,6 @@ const Header = () => {
           className="overlay_circle"
         />
       </motion.div>
-
-      <motion.div className="app__header-circles">
-        {[
-          images.redux,
-          images.sass,
-          images.react,
-          images.mui,
-          images.bootstrap,
-          images.git,
-          images.sanity,
-          images.rapidapi,
-        ].map((circle, index) => (
-          <div className="circle-cmp app__flex" key={`circle-${index}`}>
-            <img src={circle} alt="profile_bg" />
-          </div>
-        ))}
-      </motion.div>
     </div>
   );
 };
